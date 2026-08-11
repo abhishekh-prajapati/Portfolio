@@ -1,0 +1,238 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.cdnfonts.com/css/futura-now-headline');
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Futura Now Headline', sans-serif;
+  background-color: #ffffff;
+  color: #363636;
+}
+
+/* Custom Gradients */
+.gradient-1 {
+  background: #fff;
+  background: linear-gradient(0deg, #fff0, #fff 70%);
+}
+
+.spacing-1 {
+  letter-spacing: 0.09em;
+}
+
+.parent span {
+  display: inline-block;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5.5vw, 5.2rem);
+}
+
+.about-title {
+  font-size: max(2rem, 3cqi);
+}
+
+/* Card Stack & Dimensions */
+.item {
+  width: clamp(8rem, 100%, 14cqi);
+}
+
+.card {
+  width: clamp(10rem, 100%, 16cqi);
+}
+
+.stacked-cards {
+  width: clamp(10rem, 100%, 16cqi) !important;
+}
+
+@media (min-width: 600px) {
+  .item {
+    width: clamp(10rem, 100%, 16cqi);
+  }
+  .featured-item {
+    width: clamp(30rem, 100%, 44cqi);
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    width: clamp(12rem, 100%, 16cqi);
+  }
+  .featured-item {
+    width: clamp(24rem, 100%, 44cqi);
+  }
+}
+
+@media (min-width: 1024px) {
+  .item, .card, .stacked-cards {
+    width: clamp(6rem, 100%, 18cqi);
+  }
+  .featured-item {
+    width: clamp(24rem, 100%, 36cqi);
+  }
+}
+
+@media (min-width: 1280px) {
+  .featured-item {
+    width: clamp(24rem, 100%, 40cqi);
+  }
+  .card, .stacked-cards {
+    width: clamp(12rem, 100%, 24cqi);
+  }
+}
+
+@media (min-width: 1536px) {
+  .featured-item {
+    width: clamp(24rem, 100%, 36cqi);
+  }
+}
+
+/* Featured Section Patterns */
+.featured-item-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vw;
+  height: 600px;
+  will-change: transform;
+}
+
+.featured-item {
+  position: absolute;
+  width: clamp(24rem, 100%, 30cqi);
+  top: 10%;
+  left: 50%;
+  transform-origin: center center;
+  margin-left: -250px;
+  will-change: transform;
+}
+
+.bg-pattern-1 {
+  background: #fff;
+  background: linear-gradient(357deg, #fff0, #fff 5%, #74a270 50%, #fff 95% 100%);
+}
+
+.bg-pattern-2 {
+  background: #fff;
+  background: linear-gradient(356deg, #fff, #e6e6f2 4%, #5a5a5d 25%, #000, #5a5a5d 75%, #fff 96% 100%);
+}
+
+.bg-pattern-3 {
+  background: #fff;
+  background: linear-gradient(356deg, #fff0, #fff 4%, #eab308 50%, #fff 96% 100%);
+}
+
+.bg-pattern-4 {
+  background: #fff;
+  background: linear-gradient(356deg, #fff0, #fff 4%, #9f9f9f 50%, #fff 96% 100%);
+}
+
+.bg-pattern-5 {
+  background: #fff;
+  background: linear-gradient(356deg, #fff0, #fff 4%, #c5c5c5 50%, #fff 96% 100%);
+}
+
+.bg-pattern-6 {
+  background: #fff;
+  background: linear-gradient(356deg, #fff0, #fff 4%, #bdbde4 50%, #fff 96% 100%);
+}
+
+/* 3D Perspective Card Stack */
+.wrap__inner {
+  position: relative;
+  perspective: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100vw;
+  position: relative;
+  transform-style: preserve-3d;
+  display: grid;
+  grid-template-areas: "anim-card";
+  grid-template-columns: 100%;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.content .anim-card {
+  grid-area: anim-card;
+}
+
+.anim-card {
+  width: 40vw;
+  max-width: 400px;
+  min-width: 150px;
+  aspect-ratio: 2 / 3;
+  font-size: 9px;
+  text-transform: uppercase;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  position: relative;
+  align-items: stretch;
+  outline: 1px solid var(--color-card, transparent);
+  background: var(--color-bg-card, transparent);
+  grid-template-areas:
+    "card-img card-img"
+    "card-title card-meta"
+    "card-subtitle card-subtitle"
+    "card-desc card-desc";
+}
+
+.card__img {
+  grid-area: card-img;
+  background-size: cover;
+  background-position: 50% 50%;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Footer Styling */
+footer {
+  padding: 2em 1em 6em;
+  background: linear-gradient(var(--gray-gradient, #ffffff, #ffffff)) no-repeat;
+  color: rgb(var(--gray, 54, 54, 54));
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: rgb(var(--gray, 54, 54, 54));
+}
+
+.social-links a:hover {
+  color: rgb(var(--gray-dark, 0, 0, 0));
+}
+
+.word {
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+}
