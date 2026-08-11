@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  <title>Abhishekh's Portfolio</title>
+  <meta name="title" content="Abhishekh's Portfolio">
+  <meta name="description" content="Welcome to my website!">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abhishekh's Portfolio">
+  <meta property="og:description" content="Welcome to my website!">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased selection:bg-[#363636] selection:text-white">
+  <!-- Header -->
+  <header>
+    <nav class="container px-6 lg:px-12 py-5 mx-auto flex items-center justify-between relative">
+      <div class="overflow-hidden">
+        <a href="/" class="fadeup block text-[#363636] font-medium uppercase text-xs tracking-widest">ABHISHEKH
+          PRAJAPATI</a>
+      </div>
+      <div class="overflow-hidden">
+        <a href="mailto:abhishekh@example.com"
+          class="fadeup block text-[#363636] font-medium uppercase text-xs tracking-widest hover:text-gray-600 transition-colors">
+          LET'S TALK
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="overflow-x-hidden">
+    <!-- Hero Banner Section -->
+    <section class="banner-section min-h-[calc(90vh)] lg:min-h-screen flex items-center relative overflow-hidden">
+      <!-- CMatrix Animation Container (Left Side, Mid-Screen to Bottom) -->
+      <div class="absolute top-[46%] bottom-0 left-6 md:left-14 pointer-events-none z-0 opacity-85 w-72 md:w-96 overflow-hidden">
+        <canvas id="cmatrix-canvas" class="w-full h-full"></canvas>
+      </div>
+
+      <div class="w-full relative flex flex-col lg:flex-row items-center justify-between min-h-[calc(85vh)] lg:min-h-screen">
+        <!-- Left Side: Name, Description, CTAs & Tech Tags -->
+        <div class="w-full lg:w-7/12 xl:w-8/12 px-6 lg:pl-16 lg:pr-8 py-12 flex flex-col justify-center text-left relative z-30 min-h-[calc(85vh)]">
+
+          <!-- Main Name Headline -->
+          <h1 class="banner overflow-hidden relative text-left">
+            <div class="title parent text-left overflow-hidden leading-[1.05] font-bold tracking-tight text-[#990900] text-4xl sm:text-6xl lg:text-7xl xl:text-[84px]">
+              ABHISHEKH PRAJAPATI
+            </div>
+          </h1>
+
+          <!-- Subtitle / Description -->
+          <div class="sub-title overflow-hidden relative text-left max-w-2xl mt-6">
+            <div class="subtitle text-[#363636] text-lg sm:text-xl lg:text-2xl font-normal text-left leading-relaxed tracking-wide">
+              Full Stack Developer | Working on SaaS development | Freelancer | Passionate about creating intuitive, scalable, and impactful software solutions.
+            </div>
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="fadeup flex flex-wrap items-center gap-4 mt-8">
+            <a href="mailto:abhishekh@example.com"
+              class="px-7 py-3.5 rounded-full bg-[#990900] text-white font-medium text-xs tracking-widest uppercase hover:bg-red-800 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5">
+              Let's Talk →
+            </a>
+            <a href="#about"
+              class="px-7 py-3.5 rounded-full border border-gray-300 text-gray-800 font-medium text-xs tracking-widest uppercase hover:bg-gray-100 transition-all hover:-translate-y-0.5">
+              Explore Portfolio
+            </a>
+          </div>
+
+          <!-- Tech Stack Specialty Tags -->
+          <div class="fadeup flex flex-wrap items-center gap-2 mt-8 pt-6 border-t border-gray-200/80 max-w-2xl">
+            <span class="text-xs uppercase tracking-widest text-gray-400 font-medium mr-2">Specialties:</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium border border-gray-200/60">React.js</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium border border-gray-200/60">Next.js</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium border border-gray-200/60">TypeScript</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium border border-gray-200/60">Laravel</span>
+            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-medium border border-gray-200/60">GSAP</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Full Right Screen Black & White Subject Cutout (Flush to right screen edge) -->
+        <div class="w-full lg:w-5/12 h-[60vh] lg:h-screen lg:absolute lg:right-0 lg:top-0 lg:bottom-0 flex justify-end items-end z-0 overflow-hidden">
+          <img src="/image/me/yes_nobg.png" alt="Abhishekh Prajapati" class="w-full h-full max-h-screen object-contain object-right-bottom grayscale contrast-110 brightness-95 [mask-image:linear-gradient(to_bottom,black_65%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_65%,transparent_98%)]" loading="eager" decoding="async">
+          <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10"></div>
+          <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white via-white/30 to-transparent pointer-events-none z-10"></div>
+        </div>
+      </div>
+
+      <!-- Cards Container (Commented out per user request) -->
+      <!--
+      <div class="cards-container card aspect-square absolute left-[-50px] lg:left-[-90px] top-1/2 -translate-y-1/2 z-0 pointer-events-none flex items-center">
+        <div data-step class="relative stacked-cards aspect-square pointer-events-auto">
+          <div
+            class="item rounded-2xl bg-[#353c45] absolute aspect-square flex flex-col items-center justify-center text-white shadow-2xl border border-white/10 p-4 opacity-75">
+            <img src="/_astro/react.DIuD0qnA_1z85JW.webp" alt="React" class="h-14 md:h-18 w-auto mb-2 pointer-events-none" width="512"
+              height="456" loading="lazy" decoding="async">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider">REACT JS</span>
+          </div>
+          <div
+            class="item rounded-2xl bg-[#5a5a5a] absolute aspect-square flex flex-col items-center justify-center text-white shadow-2xl border border-white/10 p-4 opacity-75">
+            <img src="/_astro/nextjs.DEaSYsEF_ZHsQxk.svg" alt="NEXT JS" class="h-14 md:h-18 w-auto mb-2 pointer-events-none" width="512"
+              height="309" loading="lazy" decoding="async">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider">NEXT JS</span>
+          </div>
+          <div
+            class="item rounded-2xl bg-[#FFBA49] absolute aspect-square flex flex-col items-center justify-center text-white shadow-2xl border border-white/10 p-4 opacity-75">
+            <img src="/_astro/laravel.Bx6aUzdM_1gektd.svg" alt="Laravel" class="h-14 md:h-18 w-auto mb-2 pointer-events-none" width="256"
+              height="264" loading="lazy" decoding="async">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider">LARAVEL/PHP</span>
+          </div>
+          <div
+            class="item rounded-2xl bg-[#c92a2a] absolute aspect-square flex flex-col items-center justify-center text-white shadow-2xl border border-white/10 p-4 opacity-75">
+            <img src="/_astro/typescript.CvINSlI1_7UD7H.svg" alt="TypeScript" class="h-14 md:h-18 w-auto mb-2 pointer-events-none"
+              width="640" height="640" loading="lazy" decoding="async">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider">TYPESCRIPT</span>
+          </div>
+          <div
+            class="item rounded-2xl bg-yellow-500 absolute aspect-square flex flex-col items-center justify-center text-white shadow-2xl border border-white/10 p-4 opacity-75">
+            <img src="/_astro/gsap.CPWT-giO_2v07lU.svg" alt="GSAP" class="h-14 md:h-18 w-auto mb-2 pointer-events-none" width="2157"
+              height="2500" loading="lazy" decoding="async">
+            <span class="text-xs sm:text-sm font-semibold tracking-wider">GSAP</span>
+          </div>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <!-- About Section -->
+    <section class="min-h-[100vh] about-section mb-48 flex items-start md:items-center">
+      <div class="container mx-auto px-6 lg:px-12 pt-8">
+        <h2 class="text-left mb-8 fade-up text-gray-400 font-medium text-xs tracking-widest uppercase">ABOUT</h2>
+        <div class="grid grid-cols-12 gap-y-12 lg:gap-6">
+          <div class="col-span-12 lg:col-span-6 lg:pr-6">
+            <h3
+              class="line-fade about-title leading-tight font-medium mb-8 lg:max-w-md xl:max-w-lg 2xl:max-w-2xl relative z-10">
+              Turning Vision into <span class="text-highlight transition-colors duration-500">Interactive, </span><span
+                class="text-highlight transition-colors duration-500">Dynamic,</span> and <span
+                class="text-highlight transition-colors duration-500">Scalable</span> Websites.
+            </h3>
+            <div
+              class="max-w-xl lg:max-w-lg text-gray-600 relative min-h-[250px] md:min-h-[220px] about-para-container overflow-hidden z-0">
+              <p
+                class="about-para about-para-0 text-lg md:text-xl lg:text-[22px] leading-relaxed text-gray-700 font-normal">
+                Hi, I'm a full stack developer based in Kathmandu, Nepal. I have over 6 years of experience building
+                scalable web applications across frontend and backend technologies. I am proficient in React, Next.js,
+                TypeScript, Laravel, and GSAP animations.
+              </p>
+              <p
+                class="about-para about-para-1 text-lg md:text-xl lg:text-[22px] leading-relaxed text-gray-700 font-normal absolute top-0 left-0 w-full opacity-0 pointer-events-none">
+                I build rock-solid, type-safe web architectures using TypeScript. With strict typing and modern
+                JavaScript patterns, I ensure clean, scalable, bug-free codebases for enterprise applications.
+              </p>
+              <p
+                class="about-para about-para-2 text-lg md:text-xl lg:text-[22px] leading-relaxed text-gray-700 font-normal absolute top-0 left-0 w-full opacity-0 pointer-events-none">
+                My backend expertise includes developing robust APIs, custom CMS platforms, and scalable databases with
+                Laravel & PHP. I empower clients to manage complex content with ease.
+              </p>
+              <p
+                class="about-para about-para-3 text-lg md:text-xl lg:text-[22px] leading-relaxed text-gray-700 font-normal absolute top-0 left-0 w-full opacity-0 pointer-events-none">
+                I specialize in Next.js for server-side rendering, static site generation, and optimal SEO. I craft
+                lightning-fast full stack web applications optimized for peak performance.
+              </p>
+              <p
+                class="about-para about-para-4 text-lg md:text-xl lg:text-[22px] leading-relaxed text-gray-700 font-normal absolute top-0 left-0 w-full opacity-0 pointer-events-none">
+                I'm passionate about building dynamic user interfaces with React. Combining intuitive design, rich
+                component architectures, and smooth interactive animations to deliver seamless digital solutions.
+              </p>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6 lg:pl-12">
+            <div class="flex justify-start items-center h-full">
+              <div class="card about-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="relative overflow-hidden">
+      <div class="featured-container">
+        <div class="featured-section">
+          <div class="absolute top-10 overflow-hidden h-28 w-full">
+            <h3 class="text-5xl md:text-6xl lg:text-8xl font-bold text-gray-400 featured-title ml-12 uppercase">
+              Featured Work
+            </h3>
+          </div>
+          <div class="featured-item-container z-30">
+            <a title="SaaS Trade Automation Platform" href="#" target="_blank">
+              <div class="flex featured-item rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden group">
+                <img src="/image/Screenshot 2026-08-10 163842.png" alt="SaaS Trade Automation"
+                  class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+                <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                  <span>SaaS Trade Automation</span>
+                  <span class="text-xs font-normal text-gray-200">Market-Type Algorithmic Trading Platform</span>
+                </h3>
+              </div>
+            </a>
+            <a title="Aurum Trading Dashboard" href="#" target="_blank">
+              <div class="flex featured-item rounded-3xl bg-pattern-1 aspect-square relative overflow-hidden group">
+                <img src="/image/Screenshot 2026-08-10 163923.png" alt="Aurum Trading Dashboard"
+                  class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+                <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                  <span>Aurum Trading UI</span>
+                  <span class="text-xs font-normal text-gray-200">Real-Time Financial Dashboard & Analytics</span>
+                </h3>
+              </div>
+            </a>
+            <a title="Algorithmic Order Engine" href="#" target="_blank">
+              <div class="featured-item rounded-3xl bg-pattern-2 aspect-square relative overflow-hidden group">
+                <img src="/image/Screenshot 2026-08-10 164130.png" alt="Algorithmic Order Engine"
+                  class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+                <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                  <span>Algorithmic Order Engine</span>
+                  <span class="text-xs font-normal opacity-90">High Frequency Broker Integration</span>
+                </h3>
+              </div>
+            </a>
+            <div class="featured-item rounded-3xl bg-pattern-3 aspect-square relative overflow-hidden group">
+              <img src="/image/Screenshot 2026-08-10 164304.png" alt="Portfolio Web App"
+                class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+              <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+              <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+              <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                <span>Interactive Portfolio</span>
+                <span class="text-xs font-normal text-gray-200">Custom GSAP 3D Canvas & WebGL App</span>
+              </h3>
+            </div>
+            <a title="Fintech SaaS Architecture" href="#" target="_blank">
+              <div class="featured-item rounded-3xl bg-pattern-4 aspect-square relative overflow-hidden group">
+                <img src="/image/Screenshot 2026-08-10 164521.png" alt="Fintech SaaS Architecture"
+                  class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+                <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                  <span>Fintech SaaS Platform</span>
+                  <span class="text-xs font-normal text-gray-200">Scalable Microservices Architecture</span>
+                </h3>
+              </div>
+            </a>
+            <a title="Automated Trade Execution" href="#" target="_blank">
+              <div class="flex featured-item rounded-3xl bg-pattern-1 aspect-square relative overflow-hidden group">
+                <img src="/image/Screenshot 2026-08-10 165057.png" alt="Automated Trade Execution"
+                  class="object-contain w-11/12 rounded-3xl aspect-square m-auto transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/40 via-black/15 to-transparent backdrop-blur-md pointer-events-none rounded-t-3xl z-10"></div>
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/70 via-black/35 to-transparent backdrop-blur-md pointer-events-none rounded-b-3xl z-10"></div>
+                <h3 class="inline-flex flex-col pl-6 text-2xl md:text-3xl font-bold text-white absolute bottom-0 left-0 p-4 z-20">
+                  <span>Automated Trade Execution</span>
+                  <span class="text-xs font-normal text-gray-200">Multi-Broker Position Sync</span>
+                </h3>
+              </div>
+            </a>
+            <div class="featured-item aspect-square"></div>
+            <div class="featured-item aspect-square"></div>
+          </div>
+          <div class="featured-content-container min-h-screen flex items-center justify-center">
+            <div class="max-w-4xl mx-auto">
+              <p
+                class="px-6 lg:px-2 text-gray-400 text-center mt-4 text-3xl md:text-4xl lg:text-5xl featured-content !leading-snug">
+                Lets work together to create something awesome and beautiful. Whether you have a project in mind or just
+                want to say hi, feel free to get in touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Perspective Card Tunnel Section -->
+    <section class="relative py-12 md:py-24 overflow-hidden">
+      <div class="min-h-[100vh] flex items-center justify-center relative">
+        <div data-stack-1 class="wrap__inner w-full flex items-center justify-center">
+          <div class="content content--1">
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 163842.png" alt="SaaS Trade Automation"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 163923.png" alt="Aurum Trading Dashboard"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 164130.png" alt="Algorithmic Order Engine"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 164304.png" alt="Interactive Portfolio"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 164521.png" alt="Fintech SaaS Architecture"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/Screenshot 2026-08-10 165057.png" alt="Automated Trade Execution"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" loading="lazy">
+                  <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/30 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/50 to-transparent backdrop-blur-sm pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/me/3505d986-e03f-41f9-83d4-4d14bce059c3.jfif" alt="Abhishekh Prajapati"
+                    class="object-cover w-full h-full rounded-3xl aspect-square" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/me/65123fd0-d121-48b8-a001-71860911afff.jfif" alt="Abhishekh Prajapati"
+                    class="object-cover w-full h-full rounded-3xl aspect-square" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/me/8b91cb6e-c7dd-4b6a-aff3-42bca1fdc0f5.jfif" alt="Abhishekh Prajapati"
+                    class="object-cover w-full h-full rounded-3xl aspect-square" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/me/a3419021-681b-4692-be95-c1e062efebfe.jfif" alt="Abhishekh Prajapati"
+                    class="object-cover w-full h-full rounded-3xl aspect-square" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square relative overflow-hidden">
+                  <img src="/image/me/df286f9e-b204-4ed9-b4fa-4e655dcfc39a.jfif" alt="Abhishekh Prajapati"
+                    class="object-cover w-full h-full rounded-3xl aspect-square" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/5thavenue.DCZK2ESF_253rhe.webp" alt="5th Avenue"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1281" height="911"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/creasion.BLQJPvk5_Z172d1p.webp" alt="Creasion"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1275" height="856"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/ada.Dx-HDW3B_ZxF9g5.webp" alt="ADA"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1280" height="910"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/swift.D_COCir4_Z1numK7.webp" alt="SWIFT"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1280" height="910"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/muncha.B8_xKIZz_Z2wFHiM.webp" alt="Muncha"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1280" height="910"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-1 aspect-square">
+                  <img src="/_astro/hfl.BOUKqmur_Z2qpmvB.webp" alt="HFL"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1280" height="910"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="anim-card">
+              <div class="card__img">
+                <div class="shadow-lg flex rounded-3xl bg-pattern-6 aspect-square">
+                  <img src="/_astro/ats.B_B9dJuP_1DtNuT.webp" alt="ATS"
+                    class="object-contain w-11/12 rounded-3xl aspect-square m-auto" width="1514" height="984"
+                    loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div class="flex items-center justify-center h-full relative">
+          <div class="-z-10 sticky">
+            <h3
+              class="fade-up text-5xl md:text-6xl lg:text-8xl font-bold text-gray-400 experience-title ml-12 uppercase">
+              Experience
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Details Section -->
+    <section class="exp-section pb-24 md:pb-36">
+      <div class="container mx-auto px-6 lg:px-12">
+        <!-- 01 Cloudtech Service -->
+        <div class="exp-entry border-t border-gray-100 pt-12 pb-16">
+          <div class="grid grid-cols-12 gap-6 items-start">
+            <div class="col-span-12 md:col-span-5 flex items-start gap-4">
+              <span class="exp-index text-7xl font-bold text-gray-100 leading-none select-none -mt-1">01</span>
+              <div>
+                <h4 class="text-3xl lg:text-4xl font-medium experience-subtitle">Cloudtech Service</h4>
+                <span
+                  class="inline-block mt-2 px-2 py-0.5 text-[10px] uppercase tracking-widest border border-gray-200 text-gray-400">Senior
+                  Software Engineer</span>
+                <p class="text-gray-400 text-sm mt-2">2025 — Present</p>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-7 md:pt-1">
+              <ul class="space-y-3 text-gray-600 leading-relaxed">
+                <li>Led architecture and delivery of enterprise cloud-based software solutions, owning technical
+                  direction and key engineering decisions.</li>
+                <li>Collaborated cross-functionally with product and design teams to ship high-quality features
+                  consistently on schedule.</li>
+                <li>Mentored junior and mid-level engineers through code reviews and technical guidance, raising
+                  team-wide code quality.</li>
+              </ul>
+              <p class="mt-5 text-sm text-gray-400">Technologies: React.js, Next.js, Node.js, TypeScript</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Featherwebs -->
+        <div class="exp-entry border-t border-gray-100 pt-12 pb-16">
+          <div class="grid grid-cols-12 gap-6 items-start">
+            <div class="col-span-12 md:col-span-5 flex items-start gap-4">
+              <span class="exp-index text-7xl font-bold text-gray-100 leading-none select-none -mt-1">02</span>
+              <div>
+                <h4 class="text-3xl lg:text-4xl font-medium experience-subtitle">Featherwebs</h4>
+                <span
+                  class="inline-block mt-2 px-2 py-0.5 text-[10px] uppercase tracking-widest border border-gray-200 text-gray-400">Frontend
+                  Developer</span>
+                <p class="text-gray-400 text-sm mt-2">2022 — 2025</p>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-7 md:pt-1">
+              <ul class="space-y-3 text-gray-600 leading-relaxed">
+                <li>Spearheaded the frontend development of an in-house SaaS HRMS platform, implementing key modules
+                  like attendance, timesheet, payroll, and leave management.</li>
+                <li>Developed a dashboard for an EMI Credit Processing System using React.js with role-based access
+                  control, KYC verification, and EMI eligibility checks.</li>
+                <li>Designed, built, and maintained 10+ high-performance responsive websites and applications using
+                  React.js, Next.js, and modern frontend frameworks.</li>
+                <li>Mentored junior developers through code reviews and best practices, fostering a strong engineering
+                  culture.</li>
+              </ul>
+              <p class="mt-5 text-sm text-gray-400">Technologies: React.js, Next.js, Angular, Laravel, TypeScript,
+                Redux, Tailwind CSS, T3 Stack</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Muncha.com -->
+        <div class="exp-entry border-t border-gray-100 pt-12 pb-8">
+          <div class="grid grid-cols-12 gap-6 items-start">
+            <div class="col-span-12 md:col-span-5 flex items-start gap-4">
+              <span class="exp-index text-7xl font-bold text-gray-100 leading-none select-none -mt-1">03</span>
+              <div>
+                <h4 class="text-3xl lg:text-4xl font-medium experience-subtitle">Muncha.com</h4>
+                <span
+                  class="inline-block mt-2 px-2 py-0.5 text-[10px] uppercase tracking-widest border border-gray-200 text-gray-400">Frontend
+                  Developer</span>
+                <p class="text-gray-400 text-sm mt-2">2019 — 2022</p>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-7 md:pt-1">
+              <ul class="space-y-3 text-gray-600 leading-relaxed">
+                <li>Engineered the frontend for Muncha.com's eCommerce platform, enhancing UX and optimizing site
+                  performance.</li>
+                <li>Developed and maintained responsive UI components using HTML, CSS, and JavaScript, ensuring
+                  cross-browser compatibility.</li>
+                <li>Employed Gulp for task automation, streamlining the development workflow and enhancing project
+                  efficiency.</li>
+                <li>Collaborated with UI/UX designers and backend developers to refine features and implement design
+                  enhancements.</li>
+              </ul>
+              <p class="mt-5 text-sm text-gray-400">Technologies: HTML, SCSS, JavaScript, Gulp, Bootstrap, jQuery,
+                Alpine.js, Tailwind CSS, WordPress</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 Captura.dev -->
+        <div class="exp-entry border-t border-gray-100 pt-12 pb-8">
+          <div class="grid grid-cols-12 gap-6 items-start">
+            <div class="col-span-12 md:col-span-5 flex items-start gap-4">
+              <span class="exp-index text-7xl font-bold text-gray-100 leading-none select-none -mt-1">04</span>
+              <div>
+                <h4 class="text-3xl lg:text-4xl font-medium experience-subtitle">Captura.dev</h4>
+                <span
+                  class="inline-block mt-2 px-2 py-0.5 text-[10px] uppercase tracking-widest border border-gray-200 text-gray-400">Side
+                  Project | Full Stack Developer</span>
+                <p class="text-gray-400 text-sm mt-2">2025 — Present</p>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-7 md:pt-1">
+              <ul class="space-y-3 text-gray-600 leading-relaxed">
+                <li>Designed, developed, and launched a SaaS platform enabling teams to capture bug reports and product
+                  feedback directly from live websites via screenshots, screen recordings, annotations, and automated
+                  technical diagnostics.</li>
+                <li>Architected the full product end-to-end: frontend, backend APIs, database design, browser extension,
+                  cloud infrastructure, authentication, subscription billing, and monitoring.</li>
+                <li>Led the complete product lifecycle from ideation and system design through deployment, customer
+                  onboarding, and continuous improvement.</li>
+              </ul>
+              <p class="mt-5 text-sm text-gray-400">Technologies: Laravel, Inertia(React), JS, TypeScript, AWS, R2,
+                Docker, Dodo Payments</p>
+              <a href="https://captura.dev" target="_blank"
+                class="inline-block mt-4 text-xs uppercase tracking-widest text-gray-400 border-b border-gray-200 hover:text-gray-600 hover:border-gray-400 transition-colors">View
+                project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Preloader Screen -->
+  <div class="fixed top-0 bottom-0 w-full loader z-50 pointer-events-none">
+    <div class="absolute top-0 h-1/2 bg-black z-50 w-full curtain-top"></div>
+    <div class="absolute bottom-0 h-1/2 bg-black z-50 w-full curtain-bottom"></div>
+    <p class="text-white text-9xl font-bold text-center absolute bottom-10 right-10 z-50 progress">
+      00
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center">
+      <div class="overflow-hidden">
+        <div class="fadeup text-[#363636] font-medium uppercase text-xs">
+          Lalitpur, Nepal
+        </div>
+      </div>
+      <div class="overflow-hidden">
+        <a href="mailto:anujmgr777@gmail.com"
+          class="fadeup text-gray-400 font-medium uppercase text-xs hover:text-gray-600 transition-colors">
+          anujmgr777@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/anuj-magar-ab23a414b/" target="_blank" title="LinkedIn">
+        <span class="sr-only">LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          class="text-indigo-400 hover:opacity-70 transition-opacity" viewBox="0 0 16 16">
+          <path
+            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
+          </path>
+        </svg>
+      </a>
+      <a title="Github" href="https://github.com/AnujMgr" target="_blank">
+        <span class="sr-only">GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          class="bi bi-github hover:opacity-70 transition-opacity" viewBox="0 0 16 16">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8">
+          </path>
+        </svg>
+      </a>
+      <a title="Upwork" href="https://www.upwork.com/freelancers/anujmagar" target="_blank">
+        <span class="sr-only">Upwork</span>
+        <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+          class="hover:opacity-70 transition-opacity">
+          <path
+            d="M24.75 17.542c-1.469 0-2.849-0.62-4.099-1.635l0.302-1.432 0.010-0.057c0.276-1.521 1.13-4.078 3.786-4.078 1.99 0 3.604 1.615 3.604 3.604 0 1.984-1.615 3.599-3.604 3.599zM24.75 6.693c-3.385 0-6.016 2.198-7.083 5.818-1.625-2.443-2.865-5.38-3.583-7.854h-3.646v9.484c-0.005 1.875-1.521 3.391-3.396 3.396-1.875-0.005-3.391-1.526-3.396-3.396v-9.484h-3.646v9.484c0 3.885 3.161 7.068 7.042 7.068 3.885 0 7.042-3.182 7.042-7.068v-1.589c0.708 1.474 1.578 2.974 2.635 4.297l-2.234 10.495h3.729l1.62-7.615c1.417 0.906 3.047 1.479 4.917 1.479 4 0 7.25-3.271 7.25-7.266 0-4-3.25-7.25-7.25-7.25z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
