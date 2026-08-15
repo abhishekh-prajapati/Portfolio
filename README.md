@@ -22,7 +22,7 @@ A modern, responsive developer portfolio website built with HTML5, Vite, Tailwin
 │   └── style.css         # Tailwind directives and custom CSS
 ├── public/              # Static assets and icons
 │   └── _astro/          # Tech stack brand icons
-└── image/               # Project images and personal photos
+└── image/               # Project images and personal images
 ```
 
 ## How to Run Locally
