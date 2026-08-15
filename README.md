@@ -49,4 +49,4 @@ A modern, responsive developer portfolio website built with HTML5, Vite, Tailwin
 3. Do NOT initialize with a README (keep it empty).
 4. On the repository page, click **uploading an existing file**.
 5. Drag and drop all files and folders inside this folder (`github_manual_upload`) directly into GitHub's file drop area.
-6. Scroll down, write a commit message (e.g. `Initial portfolio commit`), and click **Commit changes**.
+6. Scroll down, write a message for commit (e.g. `Initial portfolio commit`), and click **Commit changes**.
